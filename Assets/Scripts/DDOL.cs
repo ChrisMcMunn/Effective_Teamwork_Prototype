@@ -8,7 +8,11 @@ public class DDOL : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
