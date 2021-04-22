@@ -7,31 +7,22 @@ public class Torso_Swap : MonoBehaviour
 {
     public GameObject TorsoLeft;
     public GameObject TorsoRight;
-
-    public int spriteIndex;
     public List<Sprite> Torso = new List<Sprite>();
-
-    void Start()
-    {
-        spriteIndex = 1;
-
-    }
-
 
 
     public void LeftClick()
     {
-        if (spriteIndex == 0)
+        if (GameManager.instance.TorsoIndex == 0)
         {
-            spriteIndex = Torso.Count - 1;                
-            gameObject.GetComponent<SpriteRenderer>().sprite = Torso[spriteIndex];
-            Debug.Log(spriteIndex);              
+            GameManager.instance.TorsoIndex = Torso.Count - 1;                
+            gameObject.GetComponent<SpriteRenderer>().sprite = Torso[GameManager.instance.TorsoIndex];
+            Debug.Log(GameManager.instance.TorsoIndex);              
         }
-        if (spriteIndex <= Torso.Count - 1)
+        if (GameManager.instance.TorsoIndex <= Torso.Count - 1)
         {
-            spriteIndex -= 1;            
-            gameObject.GetComponent<SpriteRenderer>().sprite = Torso[spriteIndex];
-            Debug.Log(spriteIndex);
+            GameManager.instance.TorsoIndex -= 1;            
+            gameObject.GetComponent<SpriteRenderer>().sprite = Torso[GameManager.instance.TorsoIndex];
+            Debug.Log(GameManager.instance.TorsoIndex);
 
            
         }
@@ -41,18 +32,18 @@ public class Torso_Swap : MonoBehaviour
 
     public void RightClick()
     {
-        if (spriteIndex < Torso.Count)
+        if (GameManager.instance.TorsoIndex < Torso.Count)
         {
-            spriteIndex += 1;
-            Debug.Log(spriteIndex);
+            GameManager.instance.TorsoIndex += 1;
+            Debug.Log(GameManager.instance.TorsoIndex);
             Debug.Log(Torso.Count);
-            gameObject.GetComponent<SpriteRenderer>().sprite = Torso[spriteIndex];
+            gameObject.GetComponent<SpriteRenderer>().sprite = Torso[GameManager.instance.TorsoIndex];
 
-        if (spriteIndex >= (Torso.Count) - 1)
+        if (GameManager.instance.TorsoIndex >= (Torso.Count) - 1)
             {
-            spriteIndex = 0;
-            gameObject.GetComponent<SpriteRenderer>().sprite = Torso[spriteIndex];
-            Debug.Log(spriteIndex);
+                GameManager.instance.TorsoIndex = 0;
+            gameObject.GetComponent<SpriteRenderer>().sprite = Torso[GameManager.instance.TorsoIndex];
+            Debug.Log(GameManager.instance.TorsoIndex);
             }
         }
     }

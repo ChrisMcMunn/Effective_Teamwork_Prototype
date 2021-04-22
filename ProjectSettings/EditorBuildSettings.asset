@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Map.unity
     guid: d5a930f526e941b45bfa077ad93e2677
   - enabled: 1
+    path: Assets/Scenes/Codex.unity
+    guid: b0eb523ba4c41974a8bfa164a01fc84f
+  - enabled: 1
     path: Assets/Scenes/Game_Level.unity
     guid: 6ba42541eca08854994afb361f40c8a9
   m_configObjects: {}

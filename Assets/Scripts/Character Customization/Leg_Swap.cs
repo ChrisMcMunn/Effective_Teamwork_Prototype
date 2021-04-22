@@ -7,31 +7,22 @@ public class Leg_Swap : MonoBehaviour
 {
     public GameObject LegLeft;
     public GameObject LegRight;
-
-    public int spriteIndex;
     public List<Sprite> Leg = new List<Sprite>();
-
-    void Start()
-    {
-        spriteIndex = 1;
-
-    }
-
 
 
     public void LeftClick()
     {
-        if (spriteIndex == 0)
+        if (GameManager.instance.LegIndex == 0)
         {
-            spriteIndex = Leg.Count - 1;                
-            gameObject.GetComponent<SpriteRenderer>().sprite = Leg[spriteIndex];
-            Debug.Log(spriteIndex);              
+            GameManager.instance.LegIndex = Leg.Count - 1;                
+            gameObject.GetComponent<SpriteRenderer>().sprite = Leg[GameManager.instance.LegIndex];
+            Debug.Log(GameManager.instance.LegIndex);              
         }
-        if (spriteIndex <= Leg.Count - 1)
+        if (GameManager.instance.LegIndex <= Leg.Count - 1)
         {
-            spriteIndex -= 1;            
-            gameObject.GetComponent<SpriteRenderer>().sprite = Leg[spriteIndex];
-            Debug.Log(spriteIndex);
+            GameManager.instance.LegIndex -= 1;            
+            gameObject.GetComponent<SpriteRenderer>().sprite = Leg[GameManager.instance.LegIndex];
+            Debug.Log(GameManager.instance.LegIndex);
 
            
         }
@@ -41,18 +32,18 @@ public class Leg_Swap : MonoBehaviour
 
     public void RightClick()
     {
-        if (spriteIndex < Leg.Count)
+        if (GameManager.instance.LegIndex < Leg.Count)
         {
-            spriteIndex += 1;
-            Debug.Log(spriteIndex);
+            GameManager.instance.LegIndex += 1;
+            Debug.Log(GameManager.instance.LegIndex);
             Debug.Log(Leg.Count);
-            gameObject.GetComponent<SpriteRenderer>().sprite = Leg[spriteIndex];
+            gameObject.GetComponent<SpriteRenderer>().sprite = Leg[GameManager.instance.LegIndex];
 
-        if (spriteIndex >= (Leg.Count) - 1)
+        if (GameManager.instance.LegIndex >= (Leg.Count) - 1)
             {
-            spriteIndex = 0;
-            gameObject.GetComponent<SpriteRenderer>().sprite = Leg[spriteIndex];
-            Debug.Log(spriteIndex);
+                GameManager.instance.LegIndex = 0;
+            gameObject.GetComponent<SpriteRenderer>().sprite = Leg[GameManager.instance.LegIndex];
+            Debug.Log(GameManager.instance.LegIndex);
             }
         }
     }
