@@ -9,7 +9,10 @@ public class Head_Swap : MonoBehaviour
     public GameObject HeadRight;
     public List<Sprite> Head = new List<Sprite>();
 
-
+    void Start()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = Head[GameManager.instance.HeadIndex];
+    }
 
     public void LeftClick()
     {

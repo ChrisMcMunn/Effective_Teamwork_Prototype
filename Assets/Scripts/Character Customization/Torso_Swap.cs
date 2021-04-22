@@ -9,6 +9,11 @@ public class Torso_Swap : MonoBehaviour
     public GameObject TorsoRight;
     public List<Sprite> Torso = new List<Sprite>();
 
+    void Start()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = Torso[GameManager.instance.TorsoIndex];
+    }
+
 
     public void LeftClick()
     {

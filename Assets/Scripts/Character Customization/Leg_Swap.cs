@@ -10,6 +10,11 @@ public class Leg_Swap : MonoBehaviour
     public List<Sprite> Leg = new List<Sprite>();
 
 
+    void Start()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = Leg[GameManager.instance.LegIndex];
+    }
+
     public void LeftClick()
     {
         if (GameManager.instance.LegIndex == 0)
