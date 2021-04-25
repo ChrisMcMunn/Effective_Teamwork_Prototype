@@ -1834,10 +1834,10 @@ MonoBehaviour:
   Head:
   - {fileID: 0}
   - {fileID: 21300000, guid: 11a145bd0f588f749bae05339c22c7c7, type: 3}
+  - {fileID: 21300000, guid: d4ee1f471eda92e498cf68188116e66f, type: 3}
   - {fileID: 21300000, guid: 2c8f944ab3f30f14099c0da837669f5f, type: 3}
   - {fileID: 21300000, guid: 5d8b651b0ed1fbd469d1e53b05f23875, type: 3}
   - {fileID: 21300000, guid: efb97f9165cb6164394aad9514e44e1d, type: 3}
-  - {fileID: 21300000, guid: d4ee1f471eda92e498cf68188116e66f, type: 3}
   - {fileID: 0}
 --- !u!212 &2011668802
 SpriteRenderer:

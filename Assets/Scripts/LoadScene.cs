@@ -10,4 +10,9 @@ public class LoadScene : MonoBehaviour
         Debug.Log("Load " + name + " Level");
         SceneManager.LoadScene(name);
     }
+    public void restartCurrentScene()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
 }
