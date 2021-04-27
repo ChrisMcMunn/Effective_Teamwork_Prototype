@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+
+
         if (instance != null)
         {
             Destroy(gameObject);
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public void LoadLevel(string name)
     {
         Debug.Log("Load " + name + " Level");
@@ -36,22 +39,8 @@ public class GameManager : MonoBehaviour
 
     public void restartCurrentScene()
     {
-        StartCoroutine(reload());
-    }
-    private IEnumerator reload()
-    {
-        yield return new WaitForSecondsRealtime(1);
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 
-    public void QuitLevel(string name)
-    {
-        Debug.Log("Quit the Application");
-        Application.Quit();
-    }
-    public void SoundFXs(AudioClip name)
-    {
-        GetComponent<AudioSource>().PlayOneShot(name, 1f);
-    }
 }

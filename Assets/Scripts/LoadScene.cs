@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class LoadScene : MonoBehaviour
 {
+
     public void LoadLevel(string name)
     {
         Debug.Log("Load " + name + " Level");
