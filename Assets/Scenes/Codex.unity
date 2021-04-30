@@ -199,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99753587}
   - component: {fileID: 99753586}
-  - component: {fileID: 99753585}
+  - component: {fileID: 99753584}
   m_Layer: 0
   m_Name: Music Manager
   m_TagString: Untagged
@@ -207,7 +207,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &99753585
+--- !u!114 &99753584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,11 +216,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 99753583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b8092c277d4e74d8cb010a188cf4d9, type: 3}
+  m_Script: {fileID: 11500000, guid: d923782ce2383b641a1f43edb173867b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 8300000, guid: 777b09b01abed6249a3976817369caac, type: 3}
-  gameMusic: {fileID: 8300000, guid: 27168c153a82f0541b2a254b4654cddc, type: 3}
 --- !u!82 &99753586
 AudioSource:
   m_ObjectHideFlags: 0
@@ -231,11 +229,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 777b09b01abed6249a3976817369caac, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -921,7 +919,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 89fda230e5ea2fc4d83a4801eee5aa02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 059aedd6d020ead40908f5baea7c6ded, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -929,7 +927,7 @@ SpriteRenderer:
   m_Size: {x: 9.73, y: 5.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &846920127

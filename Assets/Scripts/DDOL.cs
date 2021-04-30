@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class DDOL : MonoBehaviour
@@ -16,6 +17,13 @@ public class DDOL : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+    }
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            Destroy(gameObject);
         }
     }
 }
